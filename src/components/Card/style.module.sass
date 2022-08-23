@@ -1,0 +1,65 @@
+.Card
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  border: 1px solid violet
+  width: 450px
+  height: 250px
+  margin: 0 auto
+  padding: 15px
+  border-radius: 25px
+  background-color: #fefefe
+  animation-name: floating
+  animation-duration: 3s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out
+
+  div:last-child
+    min-height: 1.8rem
+
+.mistake
+  border: 1px solid red
+  animation-name: horizontal-shaking
+  animation-duration: .2s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out  
+.success
+  border: 1px solid #90ee90
+  animation-name: flip
+  animation-duration: .2s
+  animation-iteration-count: infinite
+  animation-timing-function: ease-in-out  
+
+@keyframes floating 
+  0%
+    transform: translate(0,  0px)
+  50%
+    transform: translate(0, 15px)
+  100%
+    transform: translate(0, -0px)
+
+@keyframes horizontal-shaking
+ 0%
+  transform: translateX(0)
+ 25%
+  transform: translateX(15px)
+ 50%
+  transform: translateX(-5px)
+ 75%
+  transform: translateX(15px)
+ 100%
+  transform: translateX(0)
+
+@keyframes flip
+ 0%
+  transform: translate(0, 0) rotate(0deg)
+ 25%
+  transform: translate(5px, 5px) rotate(5deg)
+ 50%
+  transform: translate(0, 0) rotate(0eg)
+ 75%
+  transform: translate(-5px, 5px) rotate(-5deg)
+ 100%
+  transform: translate(0, 0) rotate(0deg)
+
